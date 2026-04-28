@@ -65,9 +65,9 @@ export const projects: Project[] = [
     ],
     category: "fullstack",
     year: "2026",
-    status: "wip",
-    github: "https://github.com/ing-thejis/gemini-ai-chat",
-    demo: "#",
+    status: "live",
+    github: "https://github.com/ing-thejis/ai-chat-assistent",
+    demo: "https://ing-thejis.github.io/ai-chat-assistent/",
     highlights: [
       "Streaming-first architecture — Hono backend pipes Gemini chunks via ReadableStream, Vue frontend renders them in real time",
       "Secure backend proxy keeps the Gemini API key server-side, never exposed to the client",
