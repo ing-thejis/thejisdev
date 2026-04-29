@@ -10,6 +10,7 @@ export interface Project {
   github?: string
   demo?: string
   highlights: string[]
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     status: "live",
     github: "#",
     demo: "https://kira-petshop.vercel.app/",
+    image: new URL('../assets/kira-pet-shop.png', import.meta.url).href,
     highlights: [
       "Role-based access control (admin / cashier) enforced at route and component level",
       "Thermal receipt printing via WebUSB (ESC/POS) with automatic browser-print fallback",
@@ -50,13 +52,13 @@ export const projects: Project[] = [
     id: 2,
     title: "Gemini AI Chat",
     description:
-      "Real-time AI chat application with streaming responses, built on a Vue 3 + Hono monorepo architecture with a secure backend proxy to the Gemini 2.5 Flash model.",
+      "AI chat application built with Vue 3, backed by Supabase as the BaaS layer. Uses a Supabase Edge Function as a secure server-side proxy to interact with Google's Gemini 2.5 Flash model.",
     longDescription:
-      "A full-stack conversational app that lets users chat with Google's Gemini 2.5 Flash model through a clean, responsive interface. The frontend never calls Gemini directly — all requests go through a lightweight Hono backend that owns the API key and streams responses back as plain text chunks, which the Vue client consumes in real time and renders with a blinking cursor effect. The useChat composable centralises all state (messages, loading, errors) using Vue 3 reactivity alone, with no external store library. AI responses are parsed and displayed as rich Markdown (bold, code blocks, lists) via the marked library. Each message gets a UUID for stable list rendering, and the UI auto-scrolls to the latest chunk during streaming. Users can send with Enter, insert newlines with Shift+Enter, and clear the conversation at any time. The project is structured as a pnpm monorepo with fully typed TypeScript on both sides.",
+      "A full-stack conversational app that lets users chat with Google's Gemini 2.5 Flash model through a clean, responsive interface. The Vue 3 frontend never calls the Gemini API directly — all requests are routed through a Supabase Edge Function acting as a secure server-side proxy, keeping the API key on the server and never exposing it to the client. Supabase also provides the rest of the backend-as-a-service layer: PostgreSQL database, authentication, and storage under a single provider. The useChat composable centralises all conversation state (messages, loading, errors) using Vue 3's built-in reactivity, with no external state management library required. AI responses are rendered as rich Markdown (code blocks, lists, bold text) and the UI auto-scrolls to the latest message during streaming.",
     tags: [
       "Vue 3",
       "TypeScript",
-      "Hono",
+      "Supabase",
       "Google Gemini",
       "Vite",
       "pnpm Workspaces",
@@ -68,15 +70,16 @@ export const projects: Project[] = [
     status: "live",
     github: "https://github.com/ing-thejis/ai-chat-assistent",
     demo: "https://ing-thejis.github.io/ai-chat-assistent/",
+    image: new URL('../assets/ai-chat.png', import.meta.url).href,
     highlights: [
-      "Streaming-first architecture — Hono backend pipes Gemini chunks via ReadableStream, Vue frontend renders them in real time",
-      "Secure backend proxy keeps the Gemini API key server-side, never exposed to the client",
+      "Supabase Edge Function acts as a secure proxy — Gemini API key stays server-side, never exposed to the client",
+      "Supabase BaaS: PostgreSQL database, authentication, and storage in a single provider",
       "useChat composable encapsulates all chat logic with Vue 3 reactivity — no Pinia or Redux needed",
       "Markdown rendering via marked, displaying formatted AI responses (code blocks, lists, bold)",
       "UUID-keyed message list with auto-scroll watcher for smooth UX during long responses",
-      "Full TypeScript coverage across frontend and backend with shared Message / MessageRole types",
+      "Full TypeScript coverage across frontend and Edge Functions",
       "Keyboard UX: Enter to send, Shift+Enter for newline, real-time blinking cursor during streaming",
-      "pnpm monorepo with separate frontend (Vue/Vite) and backend (Hono/Node) packages",
+      "Vue 3 + Vite frontend with Lucide icons and a clean, responsive chat interface",
     ],
   },
   {
@@ -92,6 +95,7 @@ export const projects: Project[] = [
     status: "live",
     github: "https://github.com/ing-thejis/game-platform-phaser",
     demo: "https://ing-thejis.github.io/game-platform-phaser/",
+    image: new URL('../assets/platform-game.png', import.meta.url).href,
     highlights: [
       "2D platform game built with Phaser 3 and TypeScript",
       "Player movement, physics, tilemaps, and game states",

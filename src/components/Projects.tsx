@@ -92,11 +92,29 @@ export default function Projects() {
             return (
               <div
                 key={project.id}
-                className={`card p-6 cursor-pointer group transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`card cursor-pointer group transition-all duration-700 overflow-hidden ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                 style={{ transitionDelay: `${idx * 100}ms` }}
                 onClick={() => setExpanded(isExpanded ? null : project.id)}
               >
+                {/* Project image */}
+                {project.image && (
+                  <div className="relative w-full overflow-hidden" style={{ height: '180px' }}>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: 'linear-gradient(to bottom, rgba(13,13,13,0.1) 0%, rgba(13,13,13,0.7) 85%, rgba(13,13,13,1) 100%)'
+                      }}
+                    />
+                  </div>
+                )}
+
+                <div className="p-6">
                 {/* Top accent line */}
                 <div
                   className="h-px w-full mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -211,6 +229,7 @@ export default function Projects() {
                   </svg>
                   <span>{isExpanded ? 'Show less' : 'See highlights'}</span>
                 </div>
+                </div>{/* end p-6 */}
               </div>
             )
           })}
