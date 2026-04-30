@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="py-8 px-6" style={{ borderTop: '1px solid #1a1a1a' }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-sm font-bold" style={{ color: '#de0a26' }}>thejis.dev</span>
+          <span className="font-mono text-sm font-bold" style={{ color: '#de0a26' }}>TheJis.dev</span>
           <span style={{ color: '#52525b' }} className="text-xs">·</span>
           <span className="text-xs" style={{ color: '#71717a' }}>Frontend Developer · AI Engineer</span>
         </div>

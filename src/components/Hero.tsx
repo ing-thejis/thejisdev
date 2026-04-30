@@ -113,7 +113,7 @@ export default function Hero() {
 
         {/* Main heading */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight animate-fade-up">
-          <span className="gradient-text">TheJis</span>
+          <span className="gradient-text">I'm Jesith Garcia</span>
           <br />
           <span className="text-white text-4xl md:text-5xl font-semibold">AI-Driven Software Engineer</span>
         </h1>
