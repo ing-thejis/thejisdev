@@ -126,13 +126,15 @@ export default function Hero() {
           Frontend Focus · LLM Integrations · React · Node.js
         </p>
 
-        {/* Subheading */}
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up animation-delay-200">
-          4+ years building scalable web apps and{' '}
-          <span className="font-medium" style={{ color: '#ff6b6b' }}>AI-powered products</span>.
-          Specializing in intelligent interfaces, streaming AI experiences, and agentic workflows using{' '}
-          <span className="font-medium text-white">React, Node.js</span> and{' '}
-          <span className="font-medium" style={{ color: '#ff6b6b' }}>LLM APIs</span>.
+        {/* Subheading — answers: what, for whom, with what, what result */}
+        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-up animation-delay-200">
+          I build <span className="font-medium text-white">performant React products</span> and{' '}
+          <span className="font-medium" style={{ color: '#ff6b6b' }}>AI-powered interfaces</span> for
+          startups and product teams — from LLM integrations and streaming architectures to
+          full-stack applications that ship to real users.
+        </p>
+        <p className="text-sm text-gray-500 max-w-xl mx-auto mb-10 animate-fade-up animation-delay-200">
+          4+ years of production experience · TypeScript-first · AI-native workflow
         </p>
 
         {/* Tech stack chips */}

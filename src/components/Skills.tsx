@@ -52,8 +52,7 @@ export default function Skills() {
         {/* Header */}
         <div className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="flex items-center gap-3 mb-4">
-            <span className="font-mono text-sm" style={{ color: '#de0a26' }}>02.</span>
-            <div className="h-px flex-1 max-w-[60px]" style={{ backgroundColor: 'rgba(222,10,38,0.3)' }} />
+            <span className="font-mono text-sm" style={{ color: '#de0a26' }}>02.</span>            <div className="h-px flex-1 max-w-[60px]" style={{ backgroundColor: 'rgba(222,10,38,0.3)' }} />
           </div>
           <h2 className="section-title">
             Tech <span className="gradient-text">Stack</span>
